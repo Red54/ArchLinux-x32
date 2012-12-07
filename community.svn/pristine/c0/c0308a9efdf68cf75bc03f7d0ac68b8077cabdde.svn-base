@@ -1,4 +1,4 @@
-# $Id: PKGBUILD 80775 2012-12-03 15:42:34Z bluewind $
+# $Id$
 # Maintainer: Jan de Groot <jgc@archlinux.org>
 _pkgbasename=fontconfig
 pkgname=lib32-$_pkgbasename

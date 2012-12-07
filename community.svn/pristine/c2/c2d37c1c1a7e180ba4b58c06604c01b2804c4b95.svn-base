@@ -1,4 +1,4 @@
-# $Id: PKGBUILD 79902 2012-11-14 16:17:37Z bluewind $
+# $Id$
 # Maintainer : Ionut Biru <ibiru@archlinux.org>
 _pkgbasename=pixman
 pkgname=lib32-$_pkgbasename

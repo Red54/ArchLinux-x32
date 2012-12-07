@@ -1,4 +1,4 @@
-# $Id: PKGBUILD 80094 2012-11-16 00:03:26Z bluewind $
+# $Id$
 # Maintainer: Ionut Biru <ibiru@archlinux.org>
 
 _pkgbasename=cairo

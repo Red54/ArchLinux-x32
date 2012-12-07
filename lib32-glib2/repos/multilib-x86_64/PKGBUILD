@@ -1,11 +1,11 @@
-# $Id: PKGBUILD 79204 2012-10-31 14:37:17Z bluewind $
+# $Id: PKGBUILD 80778 2012-12-03 15:46:13Z bluewind $
 # Maintainer:  Ionut Biru <ibiru@archlinux.org>
 # Contributor: Pierre Schmitz <pierre@archlinux.de>
 # Contributor: Mikko Seppälä <t-r-a-y@mbnet.fi>
 
 _pkgbasename=glib2
 pkgname=lib32-$_pkgbasename
-pkgver=2.34.1
+pkgver=2.34.3
 pkgrel=1
 pkgdesc="Common C routines used by GTK+ 2.4 and other libs (32-bit)"
 url="http://www.gtk.org/"
@@ -15,7 +15,7 @@ depends=('lib32-pcre' 'lib32-zlib' 'lib32-dbus-core' lib32-libffi $_pkgbasename)
 makedepends=('gcc-multilib' python2)
 options=('!libtool' '!docs')
 source=(http://ftp.gnome.org/pub/GNOME/sources/glib/${pkgver%.*}/glib-${pkgver}.tar.xz)
-sha256sums=('6e84dc9d84b104725b34d255421ed7ac3629e49f437d37addde5ce3891c2e2f1')
+sha256sums=('855fcbf87cb93065b488358e351774d8a39177281023bae58c286f41612658a7')
 
 build() {
   export CC="gcc -m32"
@@ -36,5 +36,6 @@ package() {
   cd "${pkgdir}"/usr/bin
   mv gio-querymodules gio-querymodules-32
   rm -f gdbus glib* gobject-query gsettings gtester*
-  rm -rf "$pkgdir"/usr/{bin,lib32/gdbus-2.0}
+  rm -rf "$pkgdir"/usr/lib32/gdbus-2.0
+  find "$pkgdir/usr/bin" -type f -not -name gio-querymodules-32 -delete
 }
